@@ -46,7 +46,6 @@ header{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 40px;
   position:fixed;
 }
 
@@ -80,6 +79,7 @@ header{
   justify-content: center;
   align-items: center; 
   text-decoration: none;
+  width: 100%;
   
 }
 
