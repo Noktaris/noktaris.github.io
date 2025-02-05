@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Guillaume MINDER">
+    <meta name="description" content="Contactez-moi, votre web designer dédié, pour discuter de vos projets digitaux. Que ce soit pour une création de site, une refonte ou des conseils en UX/UI, il est disponible pour répondre à toutes vos questions et besoins.">
+    <title>Contactez-moi : Ensemble, Donnons Vie à Vos Projets Web</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/bebce75f-a4d3-4d00-9b51-bc9f978c9c4a-profile_image-300x300.png" type="image/png">
+    <meta name="language" content="French">
+    <meta name="keywords" content="webdesign, freelance, graphisme, développement web, création de site, identité visuelle, site vitrine, création sur mesure, création web, UX/UI design, design, responsive design">
+     <!-- Facebook Meta Tags -->
+     <meta property="og:url" content="https://noktaris.github.io/SiteCV2024/">
+     <meta property="og:type" content="website">
+     <meta property="og:title" content="Guillaume Minder | Créateur web Freelance">
+     <meta property="og:description" content="Bienvenue sur le site de Guillaume, un web designer passionné spécialisé dans la création de sites modernes, fonctionnels et esthétiques. Découvrez des solutions sur mesure adaptées à vos besoins numériques, du design responsive à l'optimisation de l'expérience utilisateur.">
+     <meta property="og:image" content="https://noktaris.github.io/SiteCV2024/images/bebce75f-a4d3-4d00-9b51-bc9f978c9c4a-profile_image-300x300.png">
+ 
+     <!-- Twitter Meta Tags -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta property="twitter:domain" content="noktaris.github.io">
+     <meta property="twitter:url" content="https://noktaris.github.io/SiteCV2024/">
+     <meta name="twitter:title" content="Guillaume Minder | Créateur web Freelance">
+     <meta name="twitter:description" content="Bienvenue sur le site de Guillaume, un web designer passionné spécialisé dans la création de sites.">
+     <meta name="twitter:image" content="https://noktaris.github.io/SiteCV2024/images/bebce75f-a4d3-4d00-9b51-bc9f978c9c4a-profile_image-300x300.png">
+    <link rel="canonical" href="https://noktaris.github.io/SiteCV2024/contact">
+    
+</head>
+<body>
+    
+    <div id="blocPage">
+
+
+
+        <header>
+
+            <nav id="menuNav">
+                <ul id="menuListe">
+                    <li><a href="index" class="titresMenu">ACCUEIL</a></li>
+                    <li><a href="cv" class="titresMenu">CV</a></li>
+                    <li><a href="portfolio" class="titresMenu">PORTFOLIO</a></li>
+                    <li><a href="contact" class="titresMenu">CONTACT</a></li>
+                </ul>
+            </nav> 
+        </header>
+
+        <main itemscope itemtype="https://schema.org/ContactPage">
+            <div class="menuMobile">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav id="menuNavMobile">
+                    <ul id="menuListeMobile">
+                    <li><a href="index" class="titresMenu">ACCUEIL</a></li>
+                    <li><a href="cv" class="titresMenu">CV</a></li>
+                    <li><a href="portfolio" class="titresMenu">PORTFOLIO</a></li>
+                    <li><a href="contact" class="titresMenu">CONTACT</a></li>
+                    </ul>
+                </nav> 
+            </div>
+            <h2 itemprop="name">Contactez-moi</h2>
+
+            <form action="?" method="get" id="contactForm">
+
+                <div class="ligne">
+                    <div class="ligneA">
+                        <div class="blocNom"><label for="nom">Nom * </label> <input type="text" name="nom" id="nom" required></div>
+                        <div class="blocPrenom"><label for="prenom">Prénom * </label> <input type="text" name="prenom" id="prenom" required></div>
+                    </div>
+
+                    <div class="ligneB">
+                        <div class="blocMail"><label for="mail">Mail * </label> <input type="email" name="mail" id="mail" required></div>
+                        <div class="blocPhone"><label for="phone">Téléphone (facultatif) </label> <input type="tel" name="phone" id="phone"></div>
+                    </div>
+                </div>
+
+                <div class="blocMessage">
+                    <label for="message">Votre message *</label> <br>
+                    <textarea name="message" id="message"></textarea>                    
+                </div>
+
+                <button type="submit">Envoyer</button>
+            </form>
+
+     
+        
+            <footer>
+
+                <div class="blocFooter">  
+                    <a href="https://www.linkedin.com/in/guillaume-minder-5b813629a/">Linkedin</a>
+                    <a href="https://www.instagram.com/noktaris/?next=%2F&hl=fr">Instagram</a>
+                </div>
+                <div class="blocFooter">  
+                    <a href="index" rel="nofollow">Accueil</a>
+                    <a href="cv" rel="nofollow">CV</a>
+                    <a href="portfolio" rel="nofollow">Portfolio</a>
+                    <a href="contact" rel="nofollow">Contact</a>  
+                </div> 
+        
+        
+            </footer>
+        </main>
+    </div>
+    <script>
+           
+        const menuNavMobile = document.getElementById("menuNavMobile");
+        const burger = document.getElementById("hamburger"); 
+
+        burger.addEventListener("click", function() {  
+            console.log("Menu clicked!");
+            menuNavMobile.classList.toggle("menuMobileActif");
+        });
+
+
+    </script>
+</body>
+</html>

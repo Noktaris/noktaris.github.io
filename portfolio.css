@@ -1,0 +1,558 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+.menuMobile {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000; /* Définit un contexte d'empilement pour le conteneur */
+  }
+  
+#blocPage{
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    background-color: black;
+}
+  
+  /* menu de navigation */
+header{
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    height: 100vh;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40px;
+    position:fixed;
+}
+  
+#menuNav ul{
+    list-style-type: none;
+    padding: 0;
+    padding-top: 0px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  
+}
+  
+  
+  
+#menuListe li{
+    writing-mode: vertical-rl; /* Écriture verticale, de droite à gauche */
+    text-orientation: upright; /* Chaque lettre est orientée correctement */
+    letter-spacing: -2px;
+    font-weight: 600;
+}
+  
+  
+#menuNav a {
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex; /* Utilise flexbox pour centrer */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    text-decoration: none;
+}
+  
+  
+#menuNav a:hover {
+    color: #B2432F;
+    transform: scale(1.1);
+}
+  
+  /* menu de navigation fin*/
+
+/* début bloc footer*/
+
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: #ffffff00;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%239C92AC' fill-opacity='0.13'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse ;
+    
+  }
+  
+.blocFooter{
+    height: 100%;
+    display: flex ;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+  
+.blocFooter a{
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+  
+.blocFooter a:hover{
+    color: #B2432F;
+    transform: scale(1.03);
+}
+/* fin bloc footer*/
+
+
+/* début bloc content*/
+main{
+    background-color: black;
+    flex: 1;
+    margin-left: 100px;
+  } 
+/* fin bloc content*/
+
+
+
+/* début bloc cardzone */
+
+#cardZone{
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    background-color: #362424;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%239C92AC' fill-opacity='0.2'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    display: flex;
+    color: aliceblue;
+    gap: 30px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* fin bloc cardzone */
+
+/* début bloc card */
+.card{
+text-decoration: none;
+width: 30%;
+height: 600px;
+padding: 30px;
+background-color: #f4f4f4;
+border-radius: 8px;
+color: #000000;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+transition: transform 0.3s ease;
+box-shadow: 5px 5px 5px 5px black;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+.card img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+/* fin bloc card */
+
+
+
+
+/* début bloc badGob */
+
+#badGob{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 300px;
+    text-align: center;
+    gap: 80px;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+#badGob::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/village-8663792_1920.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Contrôle de l'opacité */
+    z-index: -1;
+  }
+
+
+.texteBG h2{
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.texteBG p {
+    font-size: 1.8rem;
+}
+.doubleButt{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.dlBut{
+    border: 1px solid white;
+    padding: 10px 20px;
+    background-color: #4d1a1175; /* Couleur du bouton */
+    color: white; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    border-radius: 50px; /* Bords arrondis */
+    font-size: 1.8rem;
+    text-align: center; 
+    transition: color 0.3s ease, transform 0.3s ease;  
+}
+
+.dlBut:hover{
+    transform: scale(1.05);
+    background-color: #852c1d;
+}
+/* fin bloc badGob */
+
+
+
+/* début bloc alestorm */
+
+#alestorm{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background-color: #353535;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 300px;
+    text-align: center;
+    gap: 80px;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+ 
+}
+
+#alestorm::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/music-1363069_1920.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4; /* Contrôle de l'opacité */
+    z-index: -1;
+  }
+
+
+
+.texteAlestorm h2{
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.texteAlestorm p {
+    font-size: 1.8rem;
+}
+/* fin bloc alestorm */
+
+
+/* début bloc bougieCharroux */
+
+#uxParcours{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 300px;
+    text-align: center;
+    gap: 80px;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+ 
+}
+
+#uxParcours::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/bougie.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4; /* Contrôle de l'opacité */
+    z-index: -1;
+  }
+.texteuxParcours h2{
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.texteuxParcours p {
+    font-size: 1.8rem;
+}
+/* fin bloc bougieCharroux  */
+
+
+
+@media (max-width: 1128px) {
+    /* Cache la barre latérale */
+    header {
+      display: none;
+    }
+    
+    #cardZone{
+        flex-direction: column;
+    }
+
+    .card{
+        width: 60%;
+    }
+    
+    main {
+      margin-left: 0;
+    }
+
+    
+  
+    .menuMobile{
+      display: block;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0;  
+    }
+    
+  
+    /* MENU BURGER */
+    #menuNavMobile{
+      height: 100vh;
+      width: 100vw;
+      padding-top: 150px;
+      font-weight: 600;
+      margin: auto;
+      font-size: 3rem;
+      background-color: #000000b7;
+      color: #ffffff;
+      z-index: 9998;
+      position: fixed;
+      top: 0;  
+      left: -100vw;
+      transition: left 0.3s ease;
+    }
+    
+    
+    #menuNavMobile.menuMobileActif{
+      left: 0;
+    }
+    
+    
+    
+    #menuListeMobile{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style-type: none;
+      gap: 20px;
+    }
+    
+    #menuListeMobile a{
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    #menuListeMobile a:hover{
+      color: #B2432F;
+      transform: scale(1.03);
+    }
+    
+    /* Hamburger menu styles */
+    #hamburger {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 35px;
+      position: fixed;
+      z-index: 9999;
+    }
+    
+    .hamburger span {
+      width: 50px;
+      height: 6px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 5px;
+      
+    }
+  
+    /* MENU BURGER fin */
+    #cardZone {
+      padding: 15px;
+  }
+  
+  .card {
+      width: 80%;
+      height: 700px; 
+      min-height: unset; 
+      margin-block: 50px;
+  }
+  .card image{
+    height: 100%;
+  }
+
+  #badGob, #alestorm, #uxParcours {
+      padding: 50px 20px;
+  }
+
+  .texteBG h2, .texteAlestorm h2, .texteuxParcours h2 {
+      font-size: 2rem;
+  }
+
+  .texteBG p, .texteAlestorm p, .texteuxParcours p {
+      font-size: 1.3rem;
+  }
+
+  .doubleButt {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .dlBut {
+      font-size: 1.3rem;
+      width: 100%;
+      max-width: 300px;
+  }
+}
+  /* Media queries for smaller screens */
+  
+  @media (min-width: 1129px) {
+    .card {
+        max-width: 400px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    #cardZone {
+        padding: 10px;
+    }
+    
+    .card {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+
+    #hamburger {
+        width: 60px;
+        height: 60px;
+        padding: 20px;
+    }
+
+    .hamburger span {
+        width: 30px;
+        height: 4px;
+    }
+
+    #menuListeMobile {
+        gap: 15px;
+    }
+
+    #menuListeMobile a {
+        font-size: 2rem;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px 0;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .blocFooter {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        height: auto;
+        min-height: 400px;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .texteBG h2, .texteAlestorm h2, .texteuxParcours h2 {
+        font-size: 1.5rem;
+    }
+
+    .texteBG p, .texteAlestorm p, .texteuxParcours p {
+        font-size: 1rem;
+    }
+
+    .dlBut {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}

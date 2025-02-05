@@ -1,0 +1,7 @@
+User-agent: *  # S'applique à tous les robots
+Disallow: /admin/  # Interdit l'accès au dossier admin
+Disallow: /private/  # Interdit l'accès au dossier private
+Disallow: /pdfs/
+Allow: /public/  # Autorise l'accès au dossier public
+
+Sitemap: https://noktaris.github.io/SiteCV2024/sitemap.xml  # Indique où se trouve le sitemap
