@@ -46,6 +46,12 @@ header{
     align-items: center;
     position:fixed;
 }
+
+#menuNav{
+    width: 100%;
+  }
+
+
   
 #menuNav ul{
     list-style-type: none;
