@@ -46,7 +46,7 @@
   <body>
     <div id="blocPage">
       <header>
-        <nav id="menuNav">
+        <nav id="menuNav" aria-label="Menu principal">
           <ul id="menuListe">
             <li><a href="index" class="titresMenu">ACCUEIL</a></li>
             <li><a href="cv" class="titresMenu">CV</a></li>
@@ -58,13 +58,13 @@
 
       <main>
         <div class="menuMobile">
-          <div class="hamburger" id="hamburger">
+          <div class="hamburger" id="hamburger" aria-label="Ouvrir le menu mobile" aria-expanded="false" aria-controls="menuNavMobile">
             <span></span>
             <span></span>
             <span></span>
           </div>
 
-          <nav id="menuNavMobile">
+          <nav id="menuNavMobile" aria-label="Menu mobile" aria-hidden="true">
             <ul id="menuListeMobile">
               <li><a href="index" class="titresMenuList">ACCUEIL</a></li>
               <li><a href="cv" class="titresMenuList">CV</a></li>
@@ -78,6 +78,7 @@
           id="presentation"
           itemscope
           itemtype="http://schema.org/Person"
+          aria-labelledby="presentationTitle"
         >
           <div class="blocPresention1">
             <h1>Présentation, capacités, domaines, univers, services</h1>
@@ -113,7 +114,7 @@
         </section>
 
         <!-- Bloc prestation -->
-        <section id="prestation" itemscope itemtype="http://schema.org/Service">
+        <section id="prestation" itemscope itemtype="http://schema.org/Service" aria-labelledby="prestationTitle">
           <div class="blocPrestation">
             <img
               src="images/IdentitéVisuelle.jpg"
@@ -164,6 +165,7 @@
           id="travaux"
           itemscope
           itemtype="http://schema.org/CreativeWork"
+          aria-labelledby="travauxTitle"
         >
           <a href="portfolio#badGob" class="blocTravaux1 blocTravaux">
             <div class="texteCaché" itemprop="text">
@@ -187,9 +189,10 @@
           id="contact"
           itemscope
           itemtype="http://schema.org/ContactPoint"
+           aria-labelledby="contactTitle"
         >
           <div id="contactDiv">
-            <p id="pContact" itemprop="contactType">
+            <p id="pContact" itemprop="contactType" >
               Pour toute demande, c'est par ici :
             </p>
             <a href="contact" id="contactBut">Contactez-moi</a>
@@ -197,7 +200,7 @@
         </section>
 
         <footer>
-          <div class="blocFooter">
+          <div class="blocFooter" aria-label="Liens utiles">
             <a href="https://www.linkedin.com/in/guillaume-minder-5b813629a/"
               >Linkedin</a
             >
