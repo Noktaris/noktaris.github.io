@@ -1,11 +1,9 @@
 RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule (.*) $1.html [L]
+RewriteRule ^(.*)\#(.*)$ $1.html#$2 [L]
 
-RewriteRule ^index.html$ index [L]
-RewriteRule ^cv.html$ cv [L]
-RewriteRule ^portfolio.html$ portfolio [L]
-RewriteRule ^contact.html$ contact [L]
-
-RewriteRule ^(.*)\#(.*)$ $1.html#$2[L]
-
-ErrorDocument 404 /erreur404.html
-ErrorDocument 403 /erreur403.html
+ErrorDocument 404 http://10.56.8.61/developpement%20back/noktaris.github.io/404.html
+ErrorDocument 403 http://10.56.8.61/developpement%20back/noktaris.github.io/403.html
