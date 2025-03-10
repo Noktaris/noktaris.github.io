@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <link rel="manifest" href="/manifest.json">
+
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -248,6 +250,19 @@
         console.log("Menu clicked!");
         menuNavMobile.classList.toggle("menuMobileActif");
       });
+    </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('Service Worker enregistré avec succès:', registration);
+            })
+            .catch(error => {
+              console.log('Échec de l\'enregistrement du Service Worker:', error);
+            });
+        });
+      }
     </script>
   </body>
 </html>

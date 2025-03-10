@@ -1,8 +1,21 @@
 {
-  "name": "N Portfolio",
-  "theme_color": "#000000",
-  "background_color": "#000000",
-  "short_name": "Nok",
-  "id": "Nok",
-  "description": "Installez la version mobile !"
+  "short_name": "Portfolio",
+  "name": "Guillaume Portfolio",
+  "icons": [
+    {
+      "src": "images/192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#000000"
 }
